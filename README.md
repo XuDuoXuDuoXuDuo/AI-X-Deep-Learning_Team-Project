@@ -4,11 +4,11 @@
 
 **Team members**
 
-**Name1:** Huh Da, **Student Number:** 2024051112, **Department:** Not specified, **Email:** [dxu321030@gmail.com](mailto\:dxu321030@gmail.com)
+**Name1:** Huh Da, **Student Number:** 2024051112, **Department:** , **Email:** [dxu321030@gmail.com](mailto\:dxu321030@gmail.com)
 
-**Name2:** An Mi-seon, **Student Number:** 2019001349, **Department:** Not specified, **Email:** [dksaltjs@hanyang.ac.kr](mailto\:dksaltjs@hanyang.ac.kr)
+**Name2:** An Mi-seon, **Student Number:** 2019001349, **Department:** , **Email:** [dksaltjs@hanyang.ac.kr](mailto\:dksaltjs@hanyang.ac.kr)
 
-**Name3:** Huang Shaoxiong, **Student Number:** 2021055569, **Department:** Not specified, **Email:** [huangshaoxiong326@gmail.com](mailto\:huangshaoxiong326@gmail.com)
+**Name3:** Huang Shaoxiong, **Student Number:** 2021055569, **Department:** , **Email:** [huangshaoxiong326@gmail.com](mailto\:huangshaoxiong326@gmail.com)
 
 ### **I. Proposal (Option 1)**
 
