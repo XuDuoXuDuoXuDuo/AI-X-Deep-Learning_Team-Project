@@ -194,5 +194,4 @@ The extracted text is sent to the OpenAI API for summarization. The API processe
 
 ### **VI. Conclusion: Discussion**
 
-This is the translated submission. Please review and ensure there are no errors or inconsistencies. If further adjustments are required, let me know.
 
