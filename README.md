@@ -10,6 +10,8 @@
 
 **Name3:** 황소웅, **Student Number:** 2021055569, **Department:** , **Email:** [huangshaoxiong326@gmail.com](mailto\:huangshaoxiong326@gmail.com)
 
+**3.	Video address:**
+
 ### **I. Proposal (Option 1)**
 
 **(1) Motivation: Why are you doing this?**
@@ -81,9 +83,15 @@ In the API form, you can explicitly control the input content and compress it wi
 
 - **Describing Your Dataset**
 
-(1) For LLM, the latest GPT-4o large language model is called directly via the API, meaning there is no direct training dataset involved for the language model. The approach is similar to transfer learning in deep neural networks, where the pre-trained neural network's weights are used directly, avoiding the need to retrain a newly constructed deep neural network.
+(1) For large language models, we use the latest GPT-4o by directly accessing it through an API. This approach does not require training a dataset for the model but instead relies on pre-trained capabilities, similar to how transfer learning works. By using the pre-trained model, we avoid the complexity of training a new system from scratch. While this method does not involve generating or using training data, the steps for applying and utilizing the GPT-4o API are outlined in the diagram below.
 
-(2) For our goal of using pre-set prompts to read academic paper PDFs and summarize content related to those prompts, we need to select a certain number of academic paper PDFs on related topics to feed into the GPT-4o model to obtain corresponding results. For this, we need to establish a corresponding academic paper PDF database. We take the **Food Poisoning Virus Culture Technology Using Zebrafish Model topic** as an example and download **25** related academic papers using academic search engines such as Google Scholar to provide data for the large language model.
+![image](https://github.com/user-attachments/assets/67fc3d70-2ef1-4ddf-93b6-30d06a2bb1c7)
+![image](https://github.com/user-attachments/assets/12672e16-1f35-4d23-91e3-afc364b8dc03)
+![image](https://github.com/user-attachments/assets/1181894d-e580-4672-9b7d-d3d8ba49cac0)
+
+(2) To facilitate reading academic paper PDFs with preset prompts and summarizing content relevant to those prompts, we curated a collection of topic-specific academic papers for input into the GPT-4o model. This process required establishing a database of academic paper PDFs.**As an example, we focused on the topic of zebrafish-based foodborne virus culture techniques.** Using academic search engines such as Google Scholar, we compiled a dataset of 25 related academic papers to serve as input for the large language model. **The specific database of 25 academic papers on the topic of zebrafish-based foodborne virus culture techniques is illustrated in the diagram below.**
+
+![image](https://github.com/user-attachments/assets/ffa3212b-a849-4e5d-a289-f8b82cbb2ae5)
 
 ### **III. Methodology**
 
@@ -105,25 +113,76 @@ After extracting text from the PDF, a specific prompt is set up, and GPT-4 is us
 
 **4. Text Summarization Logic:**
 
-The extracted text is sent to the OpenAI API for summarization. The API processes the text and generates a summary version that includes the main contributions, research methods, and results. The text is first limited to a certain character count to comply with API constraints, ensuring that only relevant content is processed.
+The extracted text is sent to the OpenAI API for summarization. The API processes the text and generates a summary version that includes the main contributions, research methods, and results. The text is first limited to a certain character count to comply with API constraints, ensuring that only relevant content is processed.**As detailed in the project's Python file:** 
+**https://github.com/XuDuoXuDuoXuDuo/AI-X-Deep-Learning_Team-Project/blob/main/a%20Paper%20Review%20Assistant%20Leveraging%20LLM%20Technology%20Powered%20by%20ChatGPT4o%20API.ipynb**
 
 #### Explaining Features
 
 **Paper Review Assistant Functions and Code Flow Explanation:**
 
-**3.1 Environment Setup:** The code begins by installing the necessary packages (openai and pdfplumber) and importing the required modules.
+**3.1 Environment Setup:** The code begins by installing the necessary packages (openai and pdfplumber) and importing the required modules.As shown in the diagram below:
 
-**3.2 API Key Setup:** Set the OpenAI API key to enable integration with the model.
+![image](https://github.com/user-attachments/assets/59b4aded-c759-469b-a6ae-a5222e003170)
 
-**3.3 File Upload:** Use Google Colab's file upload feature to prompt users to manually upload PDF files.
+**3.2 API Key Setup:** Set the OpenAI API key to enable integration with the model.As shown in the diagram below:
 
-**3.4 Text Extraction:** Use the extract\_text\_from\_pdfs() function to iterate over uploaded PDFs and extract text while limiting the character count to ensure efficiency.
+![image](https://github.com/user-attachments/assets/806fd5b6-7dae-4ee7-b63a-8c31ac58f89f)
 
-**3.5 Input Prompt Setup:** After extracting the text, set up a prompt to further generate a focused summary of the text.
+**3.3 File Upload:** Use Google Colab's file upload feature to prompt users to manually upload PDF files.As shown in the diagram below:
 
-**3.6 Summary Invocation:** Use the extracted text to call the OpenAI API, and the API returns a summary of the paper.
+![image](https://github.com/user-attachments/assets/b0ea664a-d2c6-4f4a-ba75-03f7e8f87621)
 
-### **IV. Evaluation & Analysis**
+**3.4 Text Extraction:** Use the extract\_text\_from\_pdfs() function to iterate over uploaded PDFs and extract text while limiting the character count to ensure efficiency.As shown in the diagram below:
+
+![image](https://github.com/user-attachments/assets/485a2cfb-b4b1-45bc-af2b-d53ecb016ab2)
+![image](https://github.com/user-attachments/assets/8e24c6e6-563d-4196-bb60-e29e152b3868)
+![image](https://github.com/user-attachments/assets/cc8c5a39-0e68-41ee-be95-c2ccb557137f)
+
+**3.5 Input Prompt Setup:** After extracting the text, set up a prompt to further generate a focused summary of the text.As shown in the diagram below:
+
+![image](https://github.com/user-attachments/assets/74fa42cd-6a73-4886-8d2f-a8427024c22b)
+
+**3.6 Summary Invocation:** Use the extracted text to call the OpenAI API, and the API returns a summary of the paper.As shown in the diagram below:
+
+![image](https://github.com/user-attachments/assets/38964a4b-bb9a-4fe5-91b1-b1f328f8f362)
+
+**IV. Results:**
+
+**4.1 **Using the 21-page academic paper titled "A robust human norovirus replication model in zebrafish larvae" as an example, we successfully performed a full-text reading of the PDF document in 1.07 seconds by utilizing the OpenAI GPT-4o API Key. Based on the preset prompt, the model generated a concise summary of the key points. The specific prompt and the model's summary response are as follows:
+
+![image](https://github.com/user-attachments/assets/71947f53-d8cc-47b3-a899-8d10f79bbf27)
+
+**4.2** The response generated by the GPT-4o API is as follows. **From the results, it is evident that the response is highly accurate. The model successfully performs a comprehensive reading and understanding of the academic paper PDF and provides precise answers to the key points based on the specified prompts.**
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. **Background and Advantages of Using Zebrafish as a Model:**
+   - Zebrafish are optically transparent and have genetic, physiological, and pharmacological similarities to humans. They are cost-effective and compliant with ethical research principles, making them a valuable model for studying viral infections.
+   - Zebrafish have a comparable immune system to humans and can be used to study host-pathogen interactions. They are widely used in research due to their high fecundity and low maintenance costs compared to other vertebrate models like rodents.
+2. **Classification and Impact of Foodborne Viruses on Global Food Safety:**
+   - Human noroviruses (HuNoVs) are the leading cause of viral gastroenteritis worldwide, resulting in significant morbidity and mortality. They are responsible for large outbreaks and pose a burden on healthcare systems.
+   - The lack of robust small animal models has historically hindered the understanding and treatment of norovirus infections.
+3. **Technical Details of Viral Culture in Zebrafish, Including Infection Methods:**
+   - Zebrafish larvae were injected with a suspension of HuNoV positive stool samples into the yolk sac. This method allows for the study of viral replication within a living organism.
+   - The method demonstrated successful replication of HuNoV, with high viral titers detectable for several days post-infection.
+4. **Viral Replication Dynamics and Zebrafish Immune Response:**
+   - Viral replication was prominent in the intestine and hematopoietic tissues, supporting the notion of dual tropism in HuNoV infections.
+   - The zebrafish immune response, including the upregulation of interferon and related genes, mirrored that seen in human infections, validating the model for studying immune responses.
+5. **Influence of Environmental Factors, Like Oxygen Levels, on Viral Infection in Zebrafish:**
+   - While the document does not explicitly discuss oxygen levels, environmental factors such as water quality and temperature could influence viral replication and immune responses in zebrafish.
+6. **Role of Gut Microbiota in Viral Replication within Zebrafish:**
+   - The zebrafish gut microbiota serves functions analogous to those in mammals and may influence viral replication dynamics. The presence of a commensal microbiota is noted, but specific interactions with HuNoV were not detailed in the document.
+7. **Application of Zebrafish for Antiviral Drug Screening and Toxicity Testing:**
+   - Zebrafish larvae provide a high-throughput platform for screening potential antiviral compounds. The study demonstrated that antiviral treatment significantly reduced viral replication, highlighting the model's utility in drug development.
+   - The model allows for the testing of small molecules by adding them to the swimming water, requiring only minute amounts of compounds compared to mammalian studies.
+8. **Limitations of Zebrafish as a Model and Future Research Directions:**
+   - While zebrafish offer many advantages, there are inherent differences between fish and human physiology that may limit direct translatability of findings.
+   - Future research could focus on enhancing the model's relevance to human disease, exploring genetic manipulations, and expanding the study to other foodborne viruses.
+
+Overall, zebrafish provide a promising model for studying foodborne viruses like HuNoV, offering insights into viral pathogenesis, immune responses, and potential therapeutic interventions.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+### **V. Evaluation & Analysis**
 
 **1. Accuracy**
 
@@ -187,11 +246,24 @@ The extracted text is sent to the OpenAI API for summarization. The API processe
 - **Measurement Method:**
   - **Multi-Prompt Test:** Use multiple prompt styles to test the same paper, record the changes in generated summaries, and demonstrate the specific impact of prompts on the generated result.
   - **Effect Scoring:** Experts rate the summaries based on the relevance and depth of the content, generating statistical results.
+  - 
+**The relevant evaluation results are shown in the table below:**
 
-### **V. Related Work**
+![评价指标结果](https://github.com/user-attachments/assets/8c5ae2d0-0319-4e91-aaa4-e83eb7b8c83e)
 
-- Tools, libraries, blogs, or documentation that were used in this project.
+### **VI. Related Work**
 
-### **VI. Conclusion: Discussion**
+This project draws on various tools and resources to achieve its objectives. Key components include:
+
+**•	OpenAI GPT-4o API:** Utilized for processing and summarizing academic papers with its advanced natural language understanding capabilities.
+**•	Python Libraries:** Several Python libraries were utilized to ensure smooth implementation of the project. openai was used for accessing the GPT-4o API, while pdfplumber enabled efficient text extraction from PDF documents. Additionally, standard libraries such as os and google.colab were employed for file handling and enabling file uploads within the Colab environment.
+•	Academic Search Engines: Google Scholar served as the primary source for collecting academic papers for dataset creation.
+**•	Related Studies: **Insights were drawn from existing research that evaluates the potential of LLMs in academic writing and summarization tasks, providing a foundation for comparison and evaluation.
+
+### **VII. Conclusion**
+
+•**	(1)** The development of this paper review assistant demonstrates the potential of leveraging LLM technology, specifically GPT-4o, to streamline the process of summarizing academic papers. By integrating the GPT-4o API, we successfully addressed the challenges of reading and analyzing lengthy documents, enabling accurate and prompt-focused summaries.
+
+•**	(2)** The results highlight the assistant's efficiency and accuracy, proving its utility for researchers managing large volumes of academic literature. Future efforts can focus on refining prompt customization and expanding the system's adaptability to different academic fields, further enhancing its applicability across diverse research domains.
 
 
