@@ -83,7 +83,7 @@ In the API form, you can explicitly control the input content and compress it wi
 
 (1) For LLM, the latest GPT-4o large language model is called directly via the API, meaning there is no direct training dataset involved for the language model. The approach is similar to transfer learning in deep neural networks, where the pre-trained neural network's weights are used directly, avoiding the need to retrain a newly constructed deep neural network.
 
-(2) For our goal of using pre-set prompts to read academic paper PDFs and summarize content related to those prompts, we need to select a certain number of academic paper PDFs on related topics to feed into the GPT-4o model to obtain corresponding results. For this, we need to establish a corresponding academic paper PDF database. We take the \*\*\* topic as an example and download \*\*\* related academic papers using academic search engines such as Google Scholar to provide data for the large language model.
+(2) For our goal of using pre-set prompts to read academic paper PDFs and summarize content related to those prompts, we need to select a certain number of academic paper PDFs on related topics to feed into the GPT-4o model to obtain corresponding results. For this, we need to establish a corresponding academic paper PDF database. We take the **Food Poisoning Virus Culture Technology Using Zebrafish Model topic** as an example and download **25** related academic papers using academic search engines such as Google Scholar to provide data for the large language model.
 
 ### **III. Methodology**
 
