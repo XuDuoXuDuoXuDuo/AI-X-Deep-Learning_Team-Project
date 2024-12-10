@@ -4,7 +4,7 @@
 
 **Team members**
 
-**Name1:** 허다, **Student Number:** 2024051112, **Department:** , **Email:** [dxu321030@gmail.com](mailto\:dxu321030@gmail.com)
+**Name1:** 허다, **Student Number:** 2024051112, **Department:**：실내건축디자인 , **Email:** [dxu321030@gmail.com](mailto\:dxu321030@gmail.com)
 
 **Name2:** 안미선, **Student Number:** 2019001349, **Department:** , **Email:** [dksaltjs@hanyang.ac.kr](mailto\:dksaltjs@hanyang.ac.kr)
 
